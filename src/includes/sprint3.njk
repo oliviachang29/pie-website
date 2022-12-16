@@ -1,0 +1,27 @@
+<div class="text__section">
+    <h4>Mechanical</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <img class="lazy column-image" width="100%" src="assets/images/lazy.jpg" data-src="assets/images/sprint3/laser_cutting.png">
+        </div>
+        <div class="col-md-6">
+            <img class="lazy column-image" width="100%" src="assets/images/lazy.jpg" data-src="assets/images/sprint3/assembly.png">
+        </div>
+    </div>
+    <p>For the final sprint, we designed and fabricated the final mechanical enclosure and motor mounting with material that we purchased. Using timing belts that were purchased and made to a custom length fixed the issue of timing belts breaking because of us gluing things together. We changed the mechanical design slightly to adapt to hold stepper motors instead of DC motors. We also made the sand enclosure to hold all of the sand with the ball by gluing and bolting together layers of MDF. The final large change was instead of having a belt that held the ball to control the axial motion, we changed it to being a second arm with the rotation point being the end of the first arm. Previously, the axial motion was limited because the belt couldn’t rotate completely, but this new design allowed us to go to any point without any constraints and use a continuous belt that has a much lower chance of breaking. This resulted in a fully functional and aesthetic mechanical design to allow electrical and software to create patterns in the sand.</p>
+</div>
+
+<div class="text__section">
+    <h4>Electrical</h4>
+    <img class="lazy img-centered" width="60%" src="assets/images/lazy.jpg" data-src="assets/images/sprint3/level_view.png">
+    <p>Switching to stepper motors required changes to be made to the electrical design. At first, we had some difficulty determining how to run the motors. We started out trying to use the same motor shield but quickly realized this was not an option after burning it out. Next, we tried to use an L298N motor driver to control each motor. This had some success initially but stopped working at later steps. After extensive debugging, we determined that one of the drivers had broken somehow after our first attempt. Our final method of controlling these motors was with A4988 stepper drivers. These ended up being successful in driving the steppers without burning out. </p>
+    <p>Using the stepper motors eliminated our need for encoders since their position should already be known due to the nature of stepper motors.</p>
+    <p>Our final design included the addition of a strip of LEDs along the ends of the enclosure. These lights need to be powered with a 5V supply and controlled with a digital pin on an Arduino. To work on the LEDs and motors synchronously, we started controlling each on a different Arduino. In the end, there was no reason to consolidate to one device.</p>
+</div>
+
+<div class="text__section">
+    <h4>Software</h4>
+	<p>With the new motors and mechanical design, there were significant changes to be made to the code architecture. For one, we switched from using the encoder and dc motor libraries to using libraries for stepper motors. This meant that instead of running the motors until they reached a specified position, we could instead move them a certain number of steps for a similar and more accurate result.</p>
+	<p>Similar to our previous design, we needed to convert desired polar coordinates into motor positions. However, with the new design, we needed a different set of equations to perform the inverse kinematics, detailed in the software section. With desired angles computed, we use the number of steps per revolution to determine how far to step the motors.</p>
+	<p>We were able to go back to our original plan to make patterns using small motions between points. The only issue with this method is that the stepper motors do not create much torque. There is a lot of friction between the ball and the sand, so the motors sometimes miss steps. However, this has proved to be a manageable issue by slightly increasing our maximum distance to compensate. At the end of this final sprint, we are able to create patterns such as circles and spirals that move inward and out.</p>
+</div>

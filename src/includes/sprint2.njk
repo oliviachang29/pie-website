@@ -1,0 +1,22 @@
+
+<div class="text__section">
+    <h4>Mechanical</h4>
+    <p>The primary goal of the mechanical work in sprint 2 was to fix all of the sprint 1 mechanical bugs to allow effective software testing. We first addressed the bending axle by using a metal insert surrounded by a 3d printed cover:</p>
+    <img class="lazy img-centered" width="80%" src="assets/images/lazy.jpg" data-src="assets/images/sprint2/axel.png">
+    <p>In preparation for the final sprint, we purchased belts, hardware, and MDF.</p>
+</div>
+
+<div class="text__section">
+    <h4>Electrical</h4>
+    <p>The electrical design did not change significantly between our first two sprints. Our plan at the time was to continue using DC motors with encoders.</h4>
+</div>
+
+<div class="text__section">
+    <h4>Software</h4>
+    <p>The main focus of this sprint was on the software. In further testing motor motion, we realized that when changing the angle of the arm, we also changed the magnet’s distance from the sensor because their belt pulleys shared an axle. We had to account for this in the inverse kinematics to determine the necessary motor angles based on the desired location of the magnet.</p>
+    <img class="lazy img-centered" width="50%" src="assets/images/lazy.jpg" data-src="assets/images/sprint2/image4.png">
+    <p>Our first plan to create patterns was to make a series of close-together points and move the ball between them. The concept worked theoretically, but we were having issues precisely controlling the position. Our motors were relatively fast, and even at the slowest setting we could manage without stalling, they frequently overshot the desired position by a significant number of encoder steps.</p>
+    <p>After realizing that it would be more difficult than expected to create patterns this way, we considered an alternate option of just controlling the speeds of the motors. This would create smoother and more continuous motion without worrying about the encoders but would restrict the kinds of patterns we could create. Using the speeds method, we were able to tune the speeds correctly to create a perfect circle.</p>
+</div>
+
+<img class="lazy img-centered" width="80%" src="assets/images/lazy.jpg" data-src="assets/images/sprint2/image10.gif">

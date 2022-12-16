@@ -1,0 +1,163 @@
+---
+layout: base
+---
+<div class="noselect position-fixed" id="background-container">
+	<div class="marquee">
+		<div class="marquee-inner" aria-hidden="true">
+			<span class="background-text">Principles of Integrated Engineering</span>
+			<span class="background-text">Principles of Integrated Engineering</span>
+			<span class="background-text">Principles of Integrated Engineering</span>
+			<span class="background-text">Principles of Integrated Engineering</span>
+		</div>
+	</div>
+</div>
+
+<section id="hero">
+  <h4 id="hero__minititle" class="position-absolute abs-horizontal-center">PIE 2022</h4>
+  <div id="showreel" class="video-container lazy position-absolute abs-center video-container-background-image" data-src="assets/images/table.png">
+    <iframe src="https://www.youtube.com/embed/lu5t-XylQH0?controls=0&autoplay=1&mute=1&playsinline=1&loop=1&playlist=lu5t-XylQH0&disablekb=1&modestbranding=1"></iframe>
+  </div>
+  <div id="showreel-hider" class="position-absolute abs-center noselect"></div>
+  <h1 id="hero__title"  class="position-absolute abs-center noselect">Sand Table</h1>
+  <a href="#how-it-works" class="position-absolute abs-horizontal-center noselect" id="hero-cta-button">
+    <h4 id="hero-cta-text">Explore</h4>
+    <div class="circle"></div>
+  </a>
+</section>
+
+<section id="intro">
+  <div class="container">
+    <h2>A zen garden that draws itself. A steel ball moves around a flat sand bed via a magnet underneath, drawing different continuous patterns.</h2>
+  </div>
+  <div id="intro__image-gallery" class="horiz-image-gallery">
+    <img class="lazy" src="assets/images/lazy.jpg" data-src="assets/images/1.png">
+    <img class="lazy" src="assets/images/lazy.jpg" data-src="assets/images/2.png">
+    <img class="lazy" src="assets/images/lazy.jpg" data-src="assets/images/3.png">
+    <img class="lazy" src="assets/images/lazy.jpg" data-src="assets/images/4.png">
+  </div>
+</section>
+
+
+<section id="how-it-works">
+  <div class="container">
+    <h4>How It Works</h4>
+    <h3 id="how-it-works__desc">Rotation and extension motors control the position of the ball via magnet. An Arduino board controls the pivot and extension motors to draw patterns.</h3>
+  </div>
+  <div class="collapse-row-container">
+    <div class="collapse-container" data-bs-toggle="collapse" href="#overview" role="button" aria-expanded="false" aria-controls="overview" data-primary-color="#415F54">
+      <div class="container d-flex noselect collapse-shown">
+        <h2>Overview</h2>
+        <p>High level overview of the system.</p>
+      </div>
+      <div class="collapse collapse-hidden container" id="overview">
+        {% include "overview.njk" %}
+      </div>
+    </div>
+
+    <div class="collapse-container" data-bs-toggle="collapse" href="#mechanical" role="button" aria-expanded="false" aria-controls="mechanical" data-primary-color="#3B3232">
+      <div class="container d-flex noselect collapse-shown">
+        <h2>Mechanical</h2>
+        <p>Uniaxial arm and sand enclosure.</p>
+      </div>
+      <div class="collapse collapse-hidden container" id="mechanical">
+        {% include "mechanical.njk" %}
+      </div>
+    </div>
+
+    <div class="collapse-container" data-bs-toggle="collapse" href="#Electrical" role="button" aria-expanded="false" aria-controls="Electrical" data-primary-color="#4F3B4B">
+      <div class="container d-flex noselect collapse-shown">
+        <h2>Electrical</h2>
+        <p>Wiring diagram and list of components.</p>
+      </div>
+      <div class="collapse collapse-hidden container" id="Electrical">
+        {% include "Electrical.njk" %}
+      </div>
+    </div>
+
+    <div class="collapse-container" data-bs-toggle="collapse" href="#Software" role="button" aria-expanded="false" aria-controls="Software" data-primary-color="#48372F">
+      <div class="container d-flex noselect collapse-shown">
+        <h2>Software</h2>
+        <p>Controlling motors and LEDs via Arduino.</p>
+      </div>
+      <div class="collapse collapse-hidden container" id="Software">
+        {% include "Software.njk" %}
+      </div>
+    </div>
+
+    <div class="collapse-container" data-bs-toggle="collapse" href="#bom" role="button" aria-expanded="false" aria-controls="bom" data-primary-color="#0D4863">
+      <div class="container d-flex noselect collapse-shown">
+        <h2>Bill of Materials</h2>
+        <p>List of all parts and total project costs.</p>
+      </div>
+      <div class="collapse collapse-hidden container" id="bom">
+        {% include "bom.njk" %}
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section id="intro">
+  <div id="intro__image-gallery" class="horiz-image-gallery">
+    <img class="lazy" src="assets/images/lazy.jpg" data-src="assets/images/sprint3/level_view.png">
+    <img class="lazy" src="assets/images/lazy.jpg" data-src="assets/images/sprint1/image5.gif">
+    <img class="lazy" src="assets/images/lazy.jpg" data-src="assets/images/sprint3/level_view.png">
+    <img class="lazy" src="assets/images/lazy.jpg" data-src="assets/images/arm_no_enclosure.png">
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <h4>Process</h4>
+    <h3 id="how-it-works__desc">The project came together over the course of six weeks and three sprints.</h3>
+  </div>
+  <div class="collapse-row-container">
+    <div class="collapse-container" data-bs-toggle="collapse" href="#sprint1" role="button" aria-expanded="false" aria-controls="sprint1" data-primary-color="#3F4849">
+      <div class="container d-flex noselect collapse-shown">
+        <h2>Sprint 1</h2>
+        <p>Prototyping a magnet movement mechanism and initial circuit with DC motors.</p>
+      </div>
+      <div class="collapse collapse-hidden container" id="sprint1">
+        {% include "sprint1.njk" %}
+      </div>
+    </div>
+
+    <div class="collapse-container" data-bs-toggle="collapse" href="#sprint2" role="button" aria-expanded="false" aria-controls="sprint2" data-primary-color="#2B3242">
+      <div class="container d-flex noselect collapse-shown">
+        <h2>Sprint 2</h2>
+        <p>Exploring different methods of programming patterns into the motors.</p>
+      </div>
+      <div class="collapse collapse-hidden container" id="sprint2">
+        {% include "sprint2.njk" %}
+      </div>
+    </div>
+
+    <div class="collapse-container" data-bs-toggle="collapse" href="#sprint3" role="button" aria-expanded="false" aria-controls="sprint3" data-primary-color="#023C3D">
+      <div class="container d-flex noselect collapse-shown">
+        <h2>Sprint 3</h2>
+        <p>Final mechanical design and switching to stepper motors.</p>
+      </div>
+      <div class="collapse collapse-hidden container" id="sprint3">
+        {% include "sprint3.njk" %}
+      </div>
+    </div>
+
+    <div class="collapse-container" data-bs-toggle="collapse" href="#learnings" role="button" aria-expanded="false" aria-controls="learnings" data-primary-color="#0D4863">
+      <div class="container d-flex noselect collapse-shown">
+        <h2>Learnings</h2>
+        <p>What we learned from this process.</p>
+      </div>
+      <div class="collapse collapse-hidden container" id="learnings">
+        {% include "learnings.njk" %}
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<footer class="container">
+  <div class="footer__inner d-flex">
+    <h5>Sand Table</h5>
+    <p>Made by Tara, Miranda, Kenta, Krishna, Olivia '25 for PIE Fall 2022 at Olin College.</p>
+  </div>
+</footer>

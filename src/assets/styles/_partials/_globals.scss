@@ -1,0 +1,69 @@
+* {
+    color: white;
+    // color: black !important;
+    font-family: $FONT_NORMAL;
+    @include smooth-transition(0.25s);
+}
+
+img {
+    opacity: 0;
+}
+
+html {
+    background-color: black;
+}
+
+body {
+    opacity: 0;
+    background: repeating-linear-gradient(
+        to right,
+        transparent,
+        transparent calc(100vw/10 - 1px),
+        rgba(255,255,255,0.1) calc(100vw/10),
+        rgba(255,255,255,0.1) 1px
+    );
+}
+
+.column-image {
+    margin-bottom: $SCALE-2;
+}
+
+.img-centered {
+    margin: $SCALE-1 auto $SCALE-2;
+    display: block;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
+
+
+.abs-horizontal-center {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.abs-vertical-center {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    padding: 0 $SCALE-1;
+    @media (min-width: $md) {
+        padding: 0 $SCALE-5;
+    }
+}

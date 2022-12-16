@@ -1,0 +1,26 @@
+<img class="lazy img-centered" width="80%" src="assets/images/lazy.jpg" data-src="assets/images/sprint1/image5.gif">
+
+<div class="text__section">
+    <h4>Mechanical</h4>
+    <p>For the mechanical side on our first sprint, we focused on prototyping a magnet movement mechanism. We used existing DC motors and motors controllers for actuation and used a combination of 3d printed and laser cut parts to build the movement arm.</p>
+    <img class="lazy img-centered" width="80%" src="assets/images/lazy.jpg" data-src="assets/images/sprint1/IMG_3226.jpg">
+    <p>One primary design decision we made at the start was the need for a coaxial mechanism. By having both the actuation for radius extension and rotation on the same axis, we can eliminate the risk of tangled wires and reduce the required weight on the movement arm. The primary disadvantage with the coaxial design is an increase in complexity for the rotation system. We approached this challenge by using timing belts due to their lightweight and ease of construction with 3d printed pulleys. However, for our first iteration we aimed to purchase as few parts as possible, so we ended up making our own continuous timing belts which proved to be challenging.</p>
+    <p>Due to the small belt pitch, using pins to join the ends of the belt resulted in unreliable connections. We found that using CA glue and a piece of flexible cloth on the back of the belt produced the most consistent joins. </p>
+    <p>An additional issue we faced with our mostly printed design was our 3D printed axle bending. Below is a video of our sprint 1 mechanical iteration:</p>
+    <img class="lazy img-centered" width="80%" src="assets/images/lazy.jpg" data-src="assets/images/sprint1/image9.gif">
+    <p>Much of the instability stemmed from the center axle bending over time causing variable belt tension and inconsistent magnet travel.</p>
+    <img class="lazy img-centered" width="80%" src="assets/images/lazy.jpg" data-src="assets/images/sprint1/bottom.png">
+</div>
+
+<div class="text__section">
+    <h4>Electrical</h4>
+    <p>We used an Arduino to control our electrical system. However, because the Arduino itself cannot provide enough power to drive the motors, we added a motor shield connected to the Arduino as well as 12V power.</p>
+    <p>In order to have good control over the position of the steel ball within our sand enclosure, we needed to know the position of our two DC motors at all times. We decided the best way to do this would be to use encoders. Encoders are a type of sensor that can tell how much a shaft has rotated in terms of steps. By using the given number of steps per rotation of our encoders, we would be able to determine the distance and angle between the center and the position of the magnet. These encoders could be connected directly to digital pins on the Arduino.</p>
+    <p>Because encoders reset to zero when they are powered, we considered including a limit switch at the center of our enclosure so that we can determine where the zero position is even in the case of not starting in the center. However, this was not an issue we were encountering, and we decided to forgo actually adding one. </p>
+    <img class="lazy img-centered" width="50%" src="assets/images/lazy.jpg" data-src="assets/images/sprint1/initial_circuit_diagram.jpg">
+</div>
+
+<div class="text__section">
+    <h4>Software</h4>
+    <p>The goal of sprint one was mainly focused on getting our mechanical and electrical system into a place where we could start testing software. We did not have a complete control scheme by this time, but we were able to move the motors independently between encoder positions. We used Arduino’s encoder library to read encoder positions as the motors moved and stop them once the desired value was reached.</p>
+</div>

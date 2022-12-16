@@ -1,0 +1,246 @@
+#scrolling_sideways {
+    text-transform: uppercase;
+    color: white;
+    font-family: Canela;
+    font-size: 12vw;
+    opacity: 0.3;
+}
+
+#background-container {
+    z-index: -10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    bottom: 0;
+    opacity: 0.13;
+    width: 100vw;
+  }
+  
+  .background-text {
+    margin-bottom: 25vw;
+    font-size: 17vw;
+    font-family: Canela;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    white-space: nowrap;
+  }
+  
+  .marquee {
+    transform: rotate(90deg);
+      position: relative;
+      overflow: hidden;
+      --offset: 20vw;
+      --move-initial: calc(-25% + var(--offset));
+      --move-final: calc(-50% + var(--offset));
+  }
+  
+  .marquee-inner {
+      width: fit-content;
+      display: flex;
+      position: relative;
+      transform: translate3d(var(--move-initial), 0, 0);
+      animation: marquee 100s linear infinite;
+      /*animation-play-state: running;*/
+  }
+  
+  @keyframes marquee {
+      0% {
+          transform: translate3d(var(--move-initial), 0, 0);
+      }
+  
+      100% {
+          transform: translate3d(var(--move-final), 0, 0);
+      }
+  }
+
+#hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+#hero__minititle {
+    margin-top: $SCALE-2;
+    text-align: center;
+}
+
+#hero__title {
+    text-transform: uppercase;
+    color: white;
+    font-family: Canela;
+    font-size: 12vw;
+    text-align: center;
+    z-index: 10;
+    white-space: nowrap;
+    margin-top: -5vh;
+}
+
+#showreel {
+    margin-top: -5vh;
+}
+
+#showreel, #showreel iframe, #showreel-hider {
+    width: 52vw;
+    height: 60vh;
+}
+
+#showreel-hider {
+    height: 75vh;
+}
+
+#hero__image {
+    width: 45vw;   
+}
+
+#hero-cta-button {
+	/* position at bottom of page*/
+	bottom: 0;
+	margin-bottom: 10vh;
+	@media (min-height: 1000px) {
+		margin-bottom: 70px;
+	}
+	/* to center the text within the circle */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:hover {
+		.circle {
+			transform: scale(1.1);
+			opacity: 0.6
+		}
+		text-decoration: none;
+	}
+}
+
+#hero-cta-text {
+	margin-top: 10px;
+	white-space: nowrap;
+	font-size: 4vw;
+	@media (min-width: $sm) {
+		font-size: 20px;
+	}
+}
+
+$original-opacity: 0.3;
+
+.circle {
+	border: 1px solid white;
+	opacity: $original-opacity;
+	border-radius: 100%;
+	position: absolute;
+	transform: scale(1);
+	@include smooth-transition(0.25s);
+	animation: button-pulse 3s infinite;
+	height: 25vw;
+	width: 25vw;
+	@media (min-width: $sm) {
+		height: $SCALE-4;
+		width: $SCALE-4;
+	}
+}
+
+@keyframes button-pulse {
+	0% {
+		transform: scale(1);
+		opacity: $original-opacity;
+	}
+	50% {
+		transform: scale(1.2);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: $original-opacity;
+	}
+}
+
+#intro {
+    overflow-x: hidden;
+    padding: 20vh 0;
+}
+
+.horiz-image-gallery {
+    margin: $SCALE-3 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    margin-left: -300px;
+    img {
+        margin-right: $SCALE-2;
+    }
+}
+
+#intro__image-gallery {
+    margin-top: $SCALE-5;
+}
+
+#intro__image-gallery img {
+    height: 250px;
+    width: auto;
+}
+
+#process {
+    padding-top: $SCALE-2;
+}
+
+#how-it-works__desc {
+    margin-bottom: $SCALE-5;
+}
+
+.collapse-container {
+    // border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: $SCALE-2 0;
+    img {
+        padding: $SCALE-2 0;
+    }
+}
+
+.collapse-shown {
+    flex-direction: column;
+    @media(min-width: $md) {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    h2 {
+        margin:0 $SCALE-2 0 0;
+        width: max-content;
+    }
+    p {
+        margin-top: 20px;
+    }
+    &:hover {
+        h2 {
+            border-bottom: 2px solid white;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.collapse-hidden {
+    margin-top: $SCALE-2;
+}
+
+.text__section {
+    margin-top: $SCALE-4;
+}
+
+footer {
+    h5 {
+        font-family: $FONT_HEADINGS;
+    }
+}
+
+.footer__inner {
+    padding: $SCALE-5 0;
+    flex-direction: column;
+    @media(min-width: $md) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

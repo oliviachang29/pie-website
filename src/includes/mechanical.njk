@@ -1,0 +1,37 @@
+
+<div class="row">
+    <div class="col-md-4">
+        <img class="lazy column-image" width="100%" src="assets/images/lazy.jpg" data-src="assets/images/mechanical/image11.gif">
+    </div>
+    <div class="col-md-4">
+        <img class="lazy column-image" width="100%" src="assets/images/lazy.jpg" data-src="assets/images/mechanical/image2.png">
+    </div>
+    <div class="col-md-4">
+        <img class="lazy column-image" width="100%" src="assets/images/lazy.jpg" data-src="assets/images/mechanical/image13.png">
+    </div>
+</div>
+<p>The mechanical design consists of three main parts: the uniaxial arm, the sand enclosure, and the electrical containment. The goal of the mechanical design is to use a magnet to seamlessly move the ball anywhere within the sand enclosure based on what the software maps it to.</p>
+
+<div class="text__section">
+    <h4>The Uniaxial Arm</h4>
+    <img class="lazy img-centered" width="80%" src="assets/images/lazy.jpg" data-src="assets/images/mechanical/uniaxial_arm_white_bg.png">
+    <img class="lazy img-centered" width="60%" src="assets/images/lazy.jpg" data-src="assets/images/mechanical/image15.png">
+    <p>The uniaxial arm controls both the rotational motion and the axial motion through a single axis. This, as opposed to an x-y gantry, allows us to keep the enclosure contained to a circle. We used timing belts around the pulleys to control both arms separately. The rotational motion arm and the plates holding the motors are laser cut ¼” MDF. The axial motion arm and the black pulleys are 3D printed. All other parts, including the standoffs, shafts, and metal pulleys are all COTS (Commercial Off the Shelf) parts.</p>
+
+    <img class="lazy img-centered" width="80%" src="assets/images/lazy.jpg" data-src="assets/images/mechanical/image14.jpg">
+</div>
+
+<div class="text__section">
+    <h4>Sand Enclosure</h4>
+    <p>To make the walls that enclose the sand, we divided the circle into four parts and used ¼” MDF which was bolted and glued together. In order to save material and create room for LEDs that stuck to the inner walls of the enclosure, the width of the walls varied as shown below.</p>
+    <img class="lazy img-centered" width="40%" src="assets/images/lazy.jpg" data-src="assets/images/mechanical/image16.png">
+    <p>On each side of the sand walls, we used 2mm clear acrylic, so that it was see through on the top, and because 2mm was a proper thickness to hold up the sand while still allowing the magnet to work smoothly. In order to keep the sand enclosure at an appropriate height above the magnet in the arm, we 3D printed standoffs.</p>
+    <img class="lazy img-centered" width="40%" src="assets/images/lazy.jpg" data-src="assets/images/mechanical/image3.png">
+</div>
+
+<div class="text__section">
+    <h4>The Electrical Containment</h4>
+    <p>To keep the arduino and breadboard contained underneath the sand enclosure and not interfering with the arm, we decided to go simple by using double sided tape to hold the boards down and zip tying the wires to keep them from sticking up.</p>
+</div>
+
+<p><a href="https://cad.onshape.com/documents/36d12ebb5892fe51fbf3a1de/w/937a75d4dbc38e0b3a2188bb/e/54129be8626f3311b9e720e7?renderMode=0&uiState=63979ea4db0a3a4418490201">See the CAD files.</a></p>

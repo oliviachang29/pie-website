@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Calibre';
+    src: url('assets/fonts/Calibre-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url('assets/fonts/Calibre-Semibold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Canela';
+    src: url('assets/fonts/canela-regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+h1, h2 {
+    font-family: $FONT_HEADINGS;
+}
+
+h2 {
+    font-size: 40px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    margin-bottom: $SCALE-2;
+}
+
+h3 {
+    margin-top: $SCALE-1;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #FFFFFF;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+a {
+    text-decoration: none;
+}
+
+p a {
+    color: white;
+    text-decoration: underline;
+    &:hover {
+        opacity: 0.5;
+        color: white;
+    }
+}
